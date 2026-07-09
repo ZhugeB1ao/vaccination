@@ -19,21 +19,8 @@ body {
   line-height: 1.5;
 }
 
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
-
 button {
   cursor: pointer;
-}
-
-img,
-svg {
-  display: block;
-  max-width: 100%;
 }
 
 a {
@@ -46,40 +33,22 @@ a {
   margin-inline: auto;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-:focus-visible {
-  outline: 3px solid var(--color-primary);
-  outline-offset: 4px;
-}
-
+/* Header */
 .header {
-  padding-block: 2.5rem;
+  padding: 2.5rem;
 }
 
 .header-inner {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 2rem;
 }
 
 .logo {
   position: relative;
-  width: max-content;
   font-size: 1.625rem;
   font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1.2;
 }
 
 .logo::after {
@@ -89,7 +58,7 @@ a {
   left: 0;
   height: 3px;
   background-color: var(--color-primary);
-  border-radius: 999px;
+  border-radius: 5px;
   content: "";
 }
 
@@ -104,8 +73,7 @@ a {
 
 .navigation-link {
   position: relative;
-  display: inline-block;
-  padding-block: 0.75rem;
+  padding: 0.75rem 0;
   color: var(--color-nav-muted);
   font-size: 1rem;
   font-weight: 500;
@@ -117,10 +85,6 @@ a {
 .navigation-link:hover,
 .navigation-link.is-active {
   color: var(--color-text);
-}
-
-.navigation-link:hover {
-  transform: translateY(-1px);
 }
 
 .navigation-link.is-active {
@@ -140,11 +104,9 @@ a {
 }
 
 .status-link {
-  justify-self: end;
   padding: 1rem 1.75rem;
   background-color: var(--color-surface);
   border-radius: 1.25rem;
-  box-shadow: 0 0.35rem 0.75rem rgb(0 0 0 / 18%);
   color: var(--color-primary);
   font-weight: 700;
   transition:
@@ -154,5 +116,165 @@ a {
 
 .status-link:hover {
   background-color: var(--color-surface-raised);
-  transform: translateY(-2px);
 }
+
+/* Hero */
+.hero {
+  padding-block: 5rem 3rem;
+}
+
+.hero-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-eyebrow {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.27;
+}
+
+.hero-title span {
+  color: var(--color-primary);
+}
+
+.hero-description {
+  margin: 2.5rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.button {
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.button-primary:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: var(--color-text);
+}
+
+.button-secondary:hover {
+  background-color: var(--color-primary);
+}
+
+
+.hero-media {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 35.75rem;
+  margin-top: -0.375rem;
+}
+
+.hero-image {
+  width: 33rem;
+  height: 100%;
+  border-radius: 1.25rem;
+}
+
+.hero-badge {
+  position: absolute;
+  top: 14.75rem;
+  width: 6.25rem;
+  height: 6.25rem;
+  padding: 1rem;
+  background-color: var(--color-text);
+  border-radius: 1.25rem;
+}
+
+.hero-badge img {
+  width: 100%;
+  height: 100%;
+}
+
+.badge-doctor {
+  left: 0;
+}
+
+.badge-virus {
+  right: 0;
+}
+
+.specialists-card {
+  position: absolute;
+  bottom: -2.75rem;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 23.5rem;
+  height: 6.25rem;
+  padding: 1rem 1.25rem;
+  background-color: rgba(38, 43, 83, 0.5);
+  border-radius: 1.25rem;
+}
+
+.specialists-images {
+  display: flex;
+  align-items: center;
+}
+
+.specialists-images img {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 0.75rem;
+  margin-left: -0.25rem;
+}
+
+.specialists-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.specialists-text strong {
+  font-size: 1.5rem;
+}
+
+.specialists-text span {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
