@@ -1,0 +1,20 @@
+:root {
+  --color-primary: #17c2ec;
+
+  --color-background: #0c113f;
+  --color-background-soft: #12164a;
+  --color-background-pattern: #181162;
+
+  --color-surface: #262b53;
+  --color-surface-raised: #313559;
+  --color-border: #8789a3;
+
+  --color-text: #ffffff;
+  --color-text-muted: #b6b7c4;
+  --color-nav-muted: #8a8ba6;
+
+  --color-background-light: #feffff;
+  --color-input: #d1d5dd;
+  --color-card-light: #d6dcdd;
+  --color-text-dark: #000000;
+}
