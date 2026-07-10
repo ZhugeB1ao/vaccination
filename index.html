@@ -94,6 +94,89 @@
           </div>
         </div>
       </section>
+
+      <section class="schedule-section" id="schedule">
+        <div class="container">
+          <div class="schedule-heading">
+            <span class="schedule-heading-icon" >
+              <i data-lucide="clock-3"></i>
+            </span>
+            <h2>Schedule your Vaccination</h2>
+          </div>
+
+          <form class="schedule-card">
+            <div class="schedule-info">
+              <span
+                class="schedule-icon schedule-icon-location"
+              >
+                <i data-lucide="map-pin"></i>
+              </span>
+              <div>
+                <span>Location</span>
+                <strong>Ikeja Lagos, Nigeria</strong>
+              </div>
+            </div>
+
+            <div class="schedule-info">
+              <span
+                class="schedule-icon schedule-icon-calendar"
+              >
+                <i data-lucide="calendar-days"></i>
+              </span>
+              <div>
+                <span>Date</span>
+                <strong>29 February, 2022</strong>
+              </div>
+            </div>
+
+            <div class="schedule-info">
+              <span
+                class="schedule-icon schedule-icon-shield"
+              >
+                <i data-lucide="shield"></i>
+              </span>
+              <div>
+                <span>Vaccine Type</span>
+                <strong>Moderna</strong>
+              </div>
+            </div>
+
+            <button class="schedule-submit button" type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="vaccine-brands" aria-label="Available vaccine brands">
+        <div class="container vaccine-brands-inner">
+          <img src="./assets/images/moderna.png" alt="Moderna" />
+          <img src="./assets/images/pfizer.png" alt="Pfizer" />
+          <img src="./assets/images/astrazaneca.png" alt="AstraZeneca" />
+          <img src="./assets/images/sinovac.png" alt="Sinovac" />
+        </div>
+      </section>
+
+      <section class="status-check" id="status">
+        <div class="container">
+          <div class="status-panel">
+            <h2>Check your COVID-19 result on our Database</h2>
+
+            <form class="status-form">
+              <input id="status-name" type="text" value="Okeowo" />
+              <input id="nik-number" type="text" placeholder="NIK Number" />
+              <button type="submit" class="button">Check</button>
+            </form>
+
+            <p class="certificate-note">
+              Need a certificate for your COVID-19 result? Please click
+              <a href="#contact">here</a>
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      window.lucide?.createIcons();
+    </script>
   </body>
 </html>

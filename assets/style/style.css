@@ -14,6 +14,10 @@ body {
   min-width: 320px;
   margin: 0;
   background-color: var(--color-background);
+  background-image: url("../images/background.png");
+  background-position: top center;
+  background-repeat: repeat-y;
+  background-size: 100% auto;
   color: var(--color-text);
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
@@ -278,3 +282,182 @@ a {
   font-weight: 700;
 }
 
+/* Schedule */
+
+.schedule-heading {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.schedule-heading h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.schedule-heading-icon,
+.schedule-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--color-surface);
+  border-radius: 0.75rem;
+}
+
+.schedule-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 2.5rem;
+  background-color: rgba(38, 43, 83, 0.26);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 1.25rem 1.25rem 0 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+}
+
+.schedule-info {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.schedule-info .schedule-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.schedule-heading-icon svg,
+.schedule-icon svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  color: var(--color-primary);
+  stroke-width: 2;
+}
+
+.schedule-info span {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.schedule-submit {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.schedule-submit:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Vaccine brands */
+.vaccine-brands {
+  background-color: var(--color-background-light);
+}
+
+.vaccine-brands-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  min-height: 8.5rem;
+}
+
+.vaccine-brands img {
+  width: 100%;
+  max-height: 4rem;
+  object-fit: contain;
+  opacity: 0.5;
+}
+
+/* Status check */
+.status-check {
+  padding-block: 3.75rem 4rem;
+}
+
+.status-panel {
+  overflow: hidden;
+  background-color: rgba(38, 43, 83, 0.26);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 1.25rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(0.4rem);
+  -webkit-backdrop-filter: blur(0.4rem);
+}
+
+.status-panel h2 {
+  margin: 0;
+  padding: 2rem 5.75rem;
+  background-color: rgba(255, 255, 255, 0.04);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.status-form {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.25rem 5.75rem 0;
+  gap: 1.25rem;
+}
+
+.status-form input {
+  flex: 3;
+  height: 3.75rem;
+  padding: 0.75rem;
+  background-color: transparent;
+  border: 3px solid rgba(255, 255, 255, 0.04);
+  border-radius: 0.85rem;
+  color: var(--color-text);
+  font-weight: 500;;
+  font-size: 1.25rem;
+  outline: none;
+}
+
+.status-form input:focus {
+  border-color: var(--color-primary);
+}
+
+.status-form input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.05rem;
+}
+
+.status-form button {
+  flex: 1;
+  height: 3.75rem;
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  border-radius: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.status-form button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.certificate-note {
+  margin: 2rem 5.75rem;
+  padding: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 0.75rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+.certificate-note a {
+  text-decoration: underline;
+}
