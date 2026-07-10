@@ -146,7 +146,7 @@
         </div>
       </section>
 
-      <section class="vaccine-brands" aria-label="Available vaccine brands">
+      <section class="vaccine-brands">
         <div class="container vaccine-brands-inner">
           <img src="./assets/images/moderna.png" alt="Moderna" />
           <img src="./assets/images/pfizer.png" alt="Pfizer" />
@@ -192,8 +192,7 @@
                 Protects your immune system against viruses
               </h3>
               <p>
-                Velit ut consectetur mauris, orci amet, faucibus. Sit turpis
-                fringilla ipsum pretium, dictum. Dolor eget vel nulla lorem ac.
+                Velit ut consectetur mauris, orci amet, faucibus. Sit turpis fringilla ipsum pretium, dictum. Dolor eget vel nulla lorem ac.
               </p>
               <a class="read-more-link" href="#">
                 Read More
@@ -224,6 +223,62 @@
                 <i data-lucide="arrow-right"></i>
               </a>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="registration-section" id="registration">
+        <div class="container registration-inner">
+          <form class="registration-form">
+            <h1>Get your vaccine registration today</h1>
+
+            <h2>Patient's Full Name</h2>
+            <input id="patient-name" type="text" placeholder="Full name" />
+
+            <h2>Mobile Number</h2>
+            <p>
+              Notifications for appointment and reminders will be sent to this
+              provided number
+            </p>
+
+            <div class="phone-row">
+              <div class="phone-field">
+                <span class="flag-nigeria"></span>
+                <i data-lucide="chevron-down" class="icon-dropdown"></i>
+                <span class="phone-divider"></span>
+                <input id="phone-number" type="tel" placeholder="Phone number" />
+              </div>
+              <button class="button verify-button" type="button">Verify</button>
+            </div>
+
+            <button class="button registration-submit" type="submit">
+              Submit
+            </button>
+
+            <p class="registration-status">
+              <span>Already registered ?</span>
+              <a href="#status">Check your status</a>
+            </p>
+          </form>
+
+          <div class="registration-card">
+            <img
+              class="registration-virus"
+              src="./assets/images/virus-2.png"
+              alt=""
+            />
+            <div class="registration-vaccine-frame">
+              <img
+                class="registration-vaccine"
+                src="./assets/images/regis-vaccine.png"
+                alt="COVID-19 vaccine"
+              />
+            </div>
+            <h3>
+              <span>COVID-19</span>
+              <span>Vaccine</span>
+            </h3>
+            <a class="verify-status" href="#status">Verify Status</a>
           </div>
         </div>
       </section>
