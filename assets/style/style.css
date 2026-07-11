@@ -32,6 +32,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .container {
   width: min(100% - 2rem, 81.25rem);
   margin-inline: auto;
@@ -170,6 +175,7 @@ a {
 }
 
 .button {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 1rem 2.5rem;
@@ -418,7 +424,7 @@ a {
   border: 3px solid rgba(255, 255, 255, 0.04);
   border-radius: 0.85rem;
   color: var(--color-text);
-  font-weight: 500;;
+  font-weight: 500;
   font-size: 1.25rem;
   outline: none;
 }
@@ -491,6 +497,7 @@ a {
   grid-template-columns: 1.18fr 0.92fr 0.92fr;
   align-items: end;
   gap: 4.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .benefit-card {
@@ -750,7 +757,6 @@ a {
   width: 100%;
   max-width: none;
   height: auto;
-
 }
 
 .registration-card h3 {
@@ -775,7 +781,7 @@ a {
   z-index: 2;
   right: 50%;
   bottom: 3rem;
-  dsplay: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.75rem 1.5rem;
@@ -784,4 +790,133 @@ a {
   font-size: 1.25rem;
   font-weight: 600;
   transform: translateX(50%);
+}
+
+/* Symptoms */
+.symptoms-section {
+  position: relative;
+  overflow: hidden;
+  padding: 4.75rem 0 0;
+  text-align: center;
+}
+
+
+.symptoms-section::after {
+  right: -21rem;
+  bottom: 1rem;
+}
+
+.symptoms-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.symptoms-eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.symptoms-title {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.symptoms-title span {
+  color: var(--color-primary);
+}
+
+.symptoms-description {
+  max-width: 62rem;
+  margin: 2rem auto 0;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.symptoms-stage {
+  position: relative;
+  min-height: 30rem;
+  margin-top: 10rem;
+}
+
+.symptoms-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.symptom-pill {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.symptom-pill img {
+  flex: 0 0 auto;
+  width: 5rem;
+  height: auto;
+}
+
+.symptom-pill span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 17rem;
+  min-height: 4rem;
+  padding: 0.85rem 1.35rem;
+  background-color: rgba(38, 43, 83, 0.92);
+  border-radius: 0.75rem;
+  box-shadow: 0 1.25rem 3rem rgba(0, 0, 0, 0.18);
+
+}
+
+.symptom-pill-1 {
+  top: 0;
+  left: 10%;
+}
+
+.symptom-pill-2 {
+  top: 40%;
+  left: 0;
+}
+
+.symptom-pill-3 {
+  bottom: 0;
+  left: -5%;
+}
+
+.symptom-pill-4 {
+  top: 0;
+  right: 10%;
+}
+
+.symptom-pill-5 {
+  top: 40%;
+  right: 0;
+}
+
+.symptom-pill-6 {
+  bottom: 0;
+  right: -5%;
+}
+
+.symptoms-person {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
 }
