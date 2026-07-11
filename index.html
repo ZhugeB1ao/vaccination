@@ -15,6 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="./assets/style/style.css" />
   </head>
   <body>
@@ -334,7 +338,113 @@
           </div>
         </div>
       </section>
+
+      <section class="feedback-section">
+        <div class="container feedback-inner">
+          <p class="feedback-eyebrow">Feedback</p>
+          <h2 class="feedback-title">What our Patients Think</h2>
+          <p class="feedback-description">
+            Adipiscing nec etiam tortor elit quisque. Arcu aliquet convallis
+            aenean eu velit. Mi vestibulum, ullamcorper venenatis imperdiet
+            augue arcu donec neque.
+          </p>
+
+          <div class="testimonials">
+            <div class="testimonial-item">
+              <article class="testimonial-card">
+                <div class="patient-info">
+                  <img src="./assets/images/patient-1.png" alt="" />
+                  <div>
+                    <h3>Oyindamola Maja</h3>
+                    <p>Badagry, Lagos</p>
+                  </div>
+                </div>
+                <p class="testimonial-quote">
+                  "Been stressing about a close centre to get the
+                  <span>covid-19</span> vaccine, until I tried Vaccination.ng"
+                </p>
+              </article>
+            </div>
+
+            <div class="testimonial-item">
+              <article class="testimonial-card testimonial-card-active">
+                <div class="patient-info">
+                  <img src="./assets/images/patient-2.png" alt="" />
+                  <div>
+                    <h3>Okeowo Lekan</h3>
+                    <p>Ikeja, Lagos</p>
+                  </div>
+                </div>
+                <p class="testimonial-quote">
+                  "Got my vaccine very close to my house. Was very easy
+                  scheduling an appointment."
+                </p>
+              </article>
+            </div>
+
+            <div class="testimonial-item">
+              <article class="testimonial-card">
+                <div class="patient-info">
+                  <img src="./assets/images/patient-3.png" alt="" />
+                  <div>
+                    <h3>Kafaru Temitope</h3>
+                    <p>Obanikoro, Lagos</p>
+                  </div>
+                </div>
+                <p class="testimonial-quote">
+                  "Been stressing about a close centre to get the
+                  <span>covid-19</span> vaccine, until I tried Vaccination.ng"
+                </p>
+              </article>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <div class="contact-panel">
+            <h2>Get a quote</h2>
+            <p>Please do enter your email address below</p>
+            <div class="contact-form">
+              <input
+                id="quote-email"
+                type="email"
+                placeholder="lenux.ng@gmail.com"
+                required
+              />
+              <button type="submit">
+                <i data-lucide="send"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a class="logo footer-logo" href="#">Vaccination.ng</a>
+
+        <nav class="footer-navigation" aria-label="Footer navigation">
+          <ul class="footer-navigation-list">
+            <li><a class="is-active" href="#">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#contact">Contact us</a></li>
+          </ul>
+        </nav>
+
+        <div class="social-links">
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </footer>
+
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       window.lucide?.createIcons();

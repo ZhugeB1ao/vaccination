@@ -42,6 +42,15 @@ img {
   margin-inline: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
 /* Header */
 .header {
   padding: 2.5rem;
@@ -919,4 +928,284 @@ img {
   justify-content: center;
   align-items: center;
   margin-inline: auto;
+}
+
+/* Feedback */
+.feedback-section {
+  background-color: #ffffff;
+  background-image: url("../images/patient-background.png");
+  background-size: cover;
+  background-position: center;
+  color: var(--color-text-dark);
+  text-align: center;
+  overflow: hidden;
+  padding: 5rem 0;
+}
+
+.feedback-inner {
+  position: relative;
+}
+
+.feedback-eyebrow {
+  margin: 0 0 0.85rem;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.feedback-title {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.feedback-description {
+  max-width: 60rem;
+  margin: 1.5rem auto;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  text-align: left;
+}
+
+.testimonial-item {
+  position: relative;
+  min-width: 0;
+  padding: 5rem 0;
+}
+
+.testimonial-item::before {
+  position: absolute;
+  top: -6rem;
+  left: 50%;
+  width: min(19rem, 88%);
+  aspect-ratio: 294 / 479;
+  background: url("../images/patient-drug.png") center / contain no-repeat;
+  content: "";
+  opacity: 0.8;
+  transform: translateX(-50%);
+}
+
+.testimonial-card {
+  position: relative;
+  z-index: 1;
+  min-height: 15.5rem;
+  padding: 2rem;
+  background-color: rgba(196, 196, 196, 0.1);
+  border-radius: 1.25rem;
+  color: var(--color-text-dark);
+  backdrop-filter: blur(0.4rem);
+}
+
+.testimonial-card-active {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.patient-info {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.patient-info img {
+  flex: 0 0 auto;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+}
+
+.patient-info h3,
+.patient-info p {
+  margin: 0;
+}
+
+.patient-info h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.patient-info p {
+  margin-top: 0.35rem;
+  color: rgba(0, 0, 0, 0.48);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.testimonial-card-active .patient-info p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.testimonial-quote {
+  margin: 2rem 0 0;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.testimonial-quote span {
+  color: var(--color-primary);
+}
+
+.testimonial-card-active .testimonial-quote span {
+  color: inherit;
+}
+
+.contact-section {
+  position: relative;
+  isolation: isolate;
+  padding: 1.75rem 0;
+  background-color: var(--color-background);
+  background-image: url("../images/background.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.contact-panel {
+  max-width: 65rem;
+  margin-inline: auto;
+  padding: 4.5rem 4rem 5.5rem;
+  background-color: var(--color-primary);
+  background-clip: padding-box;
+  border: 1.5rem solid rgba(196, 196, 196, 0.15);
+  border-radius: 3rem;
+  color: var(--color-text);
+  text-align: center;
+  transform: translateY(-30%);
+}
+
+.contact-panel h2 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.contact-panel p {
+  margin: 1rem 0 2rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 5.75rem;
+  max-width: 36rem;
+  min-height: 4.75rem;
+  margin-inline: auto;
+  overflow: hidden;
+  background-color: var(--color-text);
+  border-radius: 1.5rem;
+}
+
+.contact-form input {
+  min-width: 0;
+  padding: 0 2rem;
+  background-color: transparent;
+  border: 0;
+  color: var(--color-text-dark);
+  font: inherit;
+  font-size: 1rem;
+  outline: none;
+}
+
+.contact-form input::placeholder {
+  color: rgba(0, 0, 0, 0.32);
+}
+
+.contact-form button {
+  display: grid;
+  place-items: center;
+  background-color: var(--color-background);
+  border: 0;
+  color: var(--color-text);
+  transition: background-color 180ms ease;
+}
+
+.contact-form button:hover {
+  background-color: #151b5a;
+}
+
+.contact-form button svg {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+/* Footer */
+.footer {
+  padding-bottom: 7rem;
+  background-color: var(--color-background);
+  background-image: url("../images/background.png");
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.footer-logo {
+  flex: 0 0 auto;
+}
+
+.footer-navigation-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  color: var(--color-nav-muted);
+  font-size: 1.1rem;
+  font-weight: 500;
+  list-style: none;
+}
+
+.footer-navigation-list a {
+  transition: color 180ms ease;
+}
+
+.footer-navigation-list a:hover,
+.footer-navigation-list .is-active {
+  color: var(--color-text);
+}
+
+.footer-navigation-list .is-active {
+  font-weight: 700;
+}
+
+.social-links {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-links a {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  color: var(--color-text);
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.social-links i {
+  font-size: 2rem;
 }
