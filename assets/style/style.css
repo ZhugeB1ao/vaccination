@@ -53,7 +53,7 @@ img {
 
 /* Header */
 .header {
-  padding: 2.5rem;
+  padding-block: 1.5rem 2rem;
 }
 
 .header-inner {
@@ -136,6 +136,17 @@ img {
   background-color: var(--color-surface-raised);
 }
 
+.menu-toggle {
+  display: none;
+  background-color: transparent;
+  border: 0;
+  color: var(--color-text);
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-surface);
+  padding: 0.5rem;
+}
+
 /* Hero */
 .hero {
   padding-block: 5rem 3rem;
@@ -216,7 +227,6 @@ img {
 .button-secondary:hover {
   background-color: var(--color-primary);
 }
-
 
 .hero-media {
   flex: 1;
@@ -324,16 +334,15 @@ img {
 }
 
 .schedule-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
   padding: 2rem 2.5rem;
-  background-color: rgba(38, 43, 83, 0.26);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background-color: rgba(38,43,83, 0.5);
+  background-clip: padding-box;
+  border-top: 0.5rem solid rgba(20, 26, 70, 0.5);
   border-radius: 1.25rem 1.25rem 0 0;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(0.4rem);
+  backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.4rem);
 }
 
@@ -391,7 +400,7 @@ img {
 }
 
 .vaccine-brands img {
-  width: 100%;
+  width: 20%;
   max-height: 4rem;
   object-fit: contain;
 }
@@ -403,10 +412,9 @@ img {
 
 .status-panel {
   overflow: hidden;
-  background-color: rgba(38, 43, 83, 0.26);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background-color: rgba(38, 43, 83, 0.5);
   border-radius: 1.25rem;
-  backdrop-filter: blur(0.4rem);
+  backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.4rem);
 }
 
@@ -511,7 +519,7 @@ img {
 
 .benefit-card {
   display: flex;
-  min-height: 20rem;
+  height: 20rem;
   flex-direction: column;
   justify-content: space-between;
   padding: 2.5rem;
@@ -525,6 +533,7 @@ img {
   -webkit-backdrop-filter: blur(0.4rem);
   border-color: transparent;
   border-top-right-radius: 9rem;
+  height: 30rem;
 }
 
 .benefit-card-primary .benefit-icon {
@@ -679,8 +688,12 @@ img {
 .flag-nigeria {
   width: 2.2rem;
   height: 1.4rem;
-  background:
-    linear-gradient(90deg, #1fb65b 0 33%, #ffffff 33% 66%, #1fb65b 66%);
+  background: linear-gradient(
+    90deg,
+    #1fb65b 0 33%,
+    #ffffff 33% 66%,
+    #1fb65b 66%
+  );
   border-radius: 0.25rem;
   margin-right: 0.75rem;
 }
@@ -764,7 +777,6 @@ img {
   left: 0;
   bottom: 0;
   width: 100%;
-  max-width: none;
   height: auto;
 }
 
@@ -808,7 +820,6 @@ img {
   padding: 4.75rem 0 0;
   text-align: center;
 }
-
 
 .symptoms-section::after {
   right: -21rem;
@@ -885,7 +896,6 @@ img {
   background-color: rgba(38, 43, 83, 0.92);
   border-radius: 0.75rem;
   box-shadow: 0 1.25rem 3rem rgba(0, 0, 0, 0.18);
-
 }
 
 .symptom-pill-1 {
@@ -1001,7 +1011,7 @@ img {
   z-index: 1;
   min-height: 15.5rem;
   padding: 2rem;
-  background-color: rgba(196, 196, 196, 0.1);
+  background-color: rgba(46, 46, 46, 0.1);
   border-radius: 1.25rem;
   color: var(--color-text-dark);
   backdrop-filter: blur(0.4rem);
@@ -1208,4 +1218,1049 @@ img {
 
 .social-links i {
   font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .navigation-list {
+    display: none;
+  }
+
+  .status-link {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .hero {
+    padding-top: 1rem;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    width: 80%;
+  }
+
+  .hero-media {
+    margin-bottom: 3rem;
+  }
+
+  .badge-doctor {
+    left: 5%;
+  }
+
+  .badge-virus {
+    right: 5%;
+  }
+
+  .specialists-card {
+    left: 5%;
+  }
+
+  .specialists-text {
+    width: 40%;
+  }
+
+  .schedule-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .status-form {
+    flex-direction: column;
+  }
+
+  .status-form button {
+    width: 33.33%;
+  }
+
+  .certificate-note {
+    margin: 1.5rem auto;
+  }
+
+  .contact-section {
+    padding: 0;
+  }
+
+  .benefits-header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .benefits-header > h2,
+  p {
+    width: 90%;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .benefit-card-primary {
+    grid-column: 1 / -1;
+    width: 80%;
+  }
+
+  .registration-inner {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .registration-card {
+    width: 50%;
+    align-self: flex-start;
+    transform: translateX(10%);
+  }
+
+  .symptoms-eyebrow {
+    text-align: center;
+    width: 100%;
+  }
+
+  .symptoms-stage {
+    margin-top: 3rem;
+  }
+
+  .symptom-pill {
+    font-size: 1rem;
+    gap: 0;
+  }
+
+  .symptom-pill img {
+    width: 4rem;
+    transform: translateX(1.5rem);
+  }
+
+  .symptom-pill span {
+    min-width: 14rem;
+    min-height: 3rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+  }
+
+  .symptom-pill-1 {
+    top: 20%;
+    left: 5%;
+  }
+
+  .symptom-pill-2 {
+    top: 48%;
+    left: 0;
+  }
+
+  .symptom-pill-3 {
+    bottom: 10%;
+    left: -4%;
+  }
+
+  .symptom-pill-4 {
+    top: 20%;
+    right: 5%;
+  }
+
+  .symptom-pill-5 {
+    top: 48%;
+    right: 0;
+  }
+
+  .symptom-pill-6 {
+    bottom: 10%;
+    right: -4%;
+  }
+
+  .symptoms-person {
+    height: 80%;
+  }
+
+  .symptoms-person-image {
+    width: 80%;
+  }
+
+  .feedback-inner {
+    padding-bottom: 3rem;
+  }
+
+  .feedback-eyebrow {
+    width: 100%;
+  }
+
+  .feedback-title {
+    font-size: 2.5rem;
+  }
+
+  .feedback-description {
+    font-size: 1.25rem;
+  }
+
+  .testimonials {
+    flex-direction: column;
+  }
+
+  .testimonial-item {
+    width: 60%;
+    padding: 3rem 0;
+  }
+
+  .testimonial-item::before {
+    width: 50%;
+    top: 0;
+  }
+
+  .contact-panel {
+    padding: 2rem;
+  }
+
+  .contact-panel h2 {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .footer {
+    padding-bottom: 1.5rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    font-size: 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-description {
+    margin-top: 2rem;
+    font-size: 1.125rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .button {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+  }
+
+  .hero-media {
+    height: 30rem;
+  }
+
+  .hero-badge {
+    top: 40%;
+    width: 5rem;
+    height: 5rem;
+    padding: 0.625rem;
+    border-radius: 1rem;
+  }
+
+  .badge-doctor {
+    left: 0;
+  }
+
+  .hero-image {
+    width: 85%;
+  }
+
+  .badge-virus {
+    right: 0;
+  }
+
+  .specialists-card {
+    bottom: -2rem;
+    left: 0;
+    width: 20rem;
+    height: 5.5rem;
+    padding: 0.875rem 1rem;
+  }
+
+  .specialists-images img {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+
+  .specialists-text {
+    margin-left: 0.75rem;
+  }
+
+  .specialists-text strong,
+  .specialists-text span {
+    font-size: 1.375rem;
+  }
+
+  .schedule-heading h2 {
+    font-size: 1.375rem;
+  }
+
+  .schedule-card {
+    padding: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-submit {
+    width: 50%;
+  }
+
+  .vaccine-brands-inner {
+    gap: 1.5rem;
+  }
+
+  .status-panel h2 {
+    padding: 1.75rem 1.5rem;
+    font-size: 1.125rem;
+  }
+
+  .status-form {
+    padding: 1.75rem 1.5rem 0;
+  }
+
+  .status-form .button {
+    width: 50%;
+  }
+
+  .certificate-note {
+    margin: 1.25rem auto 2rem;
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .benefits-header h2 {
+    font-size: 2.25rem;
+  }
+
+  .benefits-header p {
+    font-size: 1.125rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .benefit-card {
+    width: 70%;
+    height: 100%;
+    padding: 2rem;
+    border-radius: 1.5rem;
+  }
+
+  .benefit-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+  }
+
+  .benefit-card h3 {
+    margin: 1.25rem 0;
+    font-size: 1rem;
+  }
+
+  .benefit-card a {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+
+  .benefit-card-primary {
+    width: 85%;
+    padding: 1.5rem 1.5rem 2.5rem;
+    border-radius: 2.5rem;
+    border-top-right-radius: 50%;
+  }
+
+  .benefit-card-primary .benefit-icon {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .benefit-card-primary p {
+    font-size: 1rem;
+  }
+
+  .registration-form h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .registration-form h2 {
+    margin: 1.25rem 0 0.75rem;
+    font-size: 1.25rem;
+  }
+
+  .registration-form > p {
+    font-size: 1rem;
+  }
+
+  .registration-form input {
+    height: 3.5rem;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+  }
+
+  .phone-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .phone-field {
+    height: 3.5rem;
+  }
+
+  #phone-number {
+    margin: 0;
+  }
+
+  .verify-button {
+    width: 50%;
+  }
+
+  .verify-button,
+  .registration-submit {
+    height: 3.5rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .registration-status {
+    width: 100%;
+  }
+
+  .registration-card {
+    width: 70%;
+    min-height: 30rem;
+    align-self: center;
+    border-radius: 1.5rem;
+    transform: translateX(0);
+  }
+
+  .registration-virus {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .registration-card h3 {
+    top: 1.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .verify-status {
+    bottom: 2.75rem;
+    width: 70%;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .symptoms-section {
+    padding: 4rem 0 0;
+  }
+
+  .symptoms-eyebrow {
+    font-size: 1.25rem;
+  }
+
+  .symptoms-title {
+    font-size: 2.25rem;
+  }
+
+  .symptoms-description {
+    margin: 1.5rem auto 0;
+    font-size: 1rem;
+  }
+
+  .symptoms-stage {
+    min-height: 20rem;
+    margin-top: 4rem;
+  }
+
+  .symptoms-person-image {
+    transform: translateY(-5%);
+  }
+
+  .symptom-pill {
+    font-size: 0.8rem;
+  }
+
+  .symptom-pill img {
+    width: 3rem;
+    transform: translateX(0.75rem);
+  }
+
+  .symptom-pill span {
+    min-width: 10rem;
+    min-height: 2.25rem;
+    padding: 0 0.875rem;
+    border-radius: 0.5rem;
+  }
+
+  .symptom-pill-1 {
+    top: 5%;
+    left: 5%;
+  }
+
+  .symptom-pill-2 {
+    top: 42%;
+    left: -3%;
+  }
+
+  .symptom-pill-3 {
+    bottom: 8%;
+    left: -5%;
+  }
+
+  .symptom-pill-4 {
+    top: 5%;
+    right: 2%;
+  }
+
+  .symptom-pill-5 {
+    top: 42%;
+    right: -2%;
+  }
+
+  .symptom-pill-6 {
+    right: -3%;
+    bottom: 8%;
+  }
+
+  .feedback-section {
+    padding: 3rem 0;
+  }
+
+  .feedback-eyebrow {
+    font-size: 1.25rem;
+  }
+
+  .feedback-title {
+    font-size: 2rem;
+  }
+
+  .feedback-description {
+    margin: 1rem auto;
+    font-size: 1rem;
+  }
+
+  .testimonials {
+    gap: 1rem;
+  }
+
+  .testimonial-item {
+    width: 75%;
+  }
+
+  .testimonial-card {
+    min-height: 12rem;
+    padding: 1.75rem;
+  }
+
+  .testimonial-card .patient-info img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .testimonial-card .patient-info h3 {
+    font-size: 1.125rem;
+  }
+
+  .testimonial-card .patient-info p {
+    font-size: 0.85rem;
+  }
+
+  .testimonial-quote {
+    width: 100%;
+    font-size: 0.875rem;
+  }
+
+  .contact-panel {
+    padding: 1.5rem 2rem 2.5rem;
+    border: 0.75rem solid rgba(196, 196, 196, 0.15);
+    border-radius: 2rem;
+  }
+
+  .contact-panel h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .contact-panel p {
+    width: 100%;
+    margin: 0.5rem auto 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .contact-form {
+    min-height: 3.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .footer-inner {
+    gap: 1.5rem;
+  }
+
+  .footer-logo {
+    font-size: 1.25rem;
+  }
+
+  .footer-navigation-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin: 1rem 0 0;
+    font-size: 0.875rem;
+  }
+
+  .social-links {
+    gap: 0.5rem;
+  }
+
+  .social-links a {
+    width: auto;
+    height: 2.25rem;
+  }
+
+  .social-links i {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.837rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .hero-media {
+    height: 25rem;
+  }
+
+  .hero-badge {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.4rem;
+    border-radius: 0.75rem;
+    top: 40%;
+  }
+
+  .badge-doctor {
+    left: 0;
+  }
+
+  .hero-image {
+    width: 80%;
+  }
+
+  .badge-virus {
+    right: 0;
+  }
+
+  .specialists-card {
+    width: 17rem;
+    height: 5rem;
+    padding: 0.75rem 1rem;
+    left: 0;
+    bottom: -1.5rem;
+  }
+
+  .specialists-images img {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .specialists-text {
+    margin-left: 0.75rem;
+  }
+
+  .specialists-text strong {
+    font-size: 1.25rem;
+  }
+
+  .specialists-text span {
+    font-size: 1.25rem;
+  }
+
+  .schedule-heading h2 {
+    font-size: 1.25rem;
+  }
+
+  .schedule-card {
+    padding: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-submit {
+    width: 50%;
+  }
+
+  .vaccine-brands-inner {
+    gap: 1rem;
+  }
+
+  .status-panel h2 {
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .status-form {
+    padding: 1.5rem 1rem 0;
+  }
+
+  .status-form .button {
+    width: 50%;
+  }
+
+  .certificate-note {
+    margin: 1rem auto 2rem;
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .benefits-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .benefits-header p {
+    font-size: 1rem;
+  }
+
+  .benefits-grid {
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-card {
+    width: 60%;
+    height: 100%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .benefit-icon {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .benefit-card h3 {
+    font-size: 0.75rem;
+    margin: 1rem 0 ;
+  }
+
+  .benefit-card a {
+    font-size: 0.75rem;
+    margin: 0;
+  }
+
+  .benefit-card-primary {
+    width: 80%;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    border-radius: 2rem;
+    border-top-right-radius: 50%;
+  }
+
+  .benefit-card-primary .benefit-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .benefit-card-primary p {
+    font-size: 0.85rem;
+  }
+
+  .registration-form h1{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .registration-form h2 {
+    font-size: 1rem;
+    margin: 1rem 0 0.5rem;
+  }
+
+  .registration-form > p {
+    font-size: 0.75rem;
+  }
+
+  .registration-form input {
+    height: 3rem;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .phone-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .phone-field {
+    height: 3rem;
+  }
+
+  #phone-number{
+    margin: 0;
+  }
+
+  .verify-button {
+    width: 50%;
+  }
+
+  .verify-button,
+  .registration-submit {
+    height: 3rem;
+    font-size: 0.85rem;
+    border-radius: 0.75rem;
+  }
+
+  .registration-status {
+    width: 100%;
+  }
+
+  .registration-card {
+    width: 80%;
+    min-height: 25rem;
+    transform: translateX(0);
+    align-self: center;
+    border-radius: 1rem;
+  }
+
+  .registration-virus {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .registration-card h3 {
+    top: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .verify-status {
+    bottom: 2.5rem;
+    font-size: 0.85rem;
+    border-radius: 0.75rem;
+    padding: 1rem 2.5rem;
+    width: 70%;
+  }
+
+  .symptoms-section {
+    padding: 3rem 0 0;
+  }
+
+  .symptoms-eyebrow {
+    font-size: 1rem;
+  }
+
+  .symptoms-title {
+    font-size: 1.75rem;
+  }
+
+  .symptoms-description {
+    font-size: 0.8rem;
+    margin: 1.5rem auto 0;
+  }
+
+  .symptoms-stage {
+    min-height: 12rem;
+    margin-top: 3rem;
+  }
+
+  .symptoms-person-image {
+    transform: translateY(-10%);
+  }
+
+  .symptom-pill {
+    font-size: 0.6rem;
+
+  }
+
+  .symptom-pill img {
+    width: 2rem;
+    transform: translateX(0.4rem);
+  }
+
+  .symptom-pill span {
+    min-width: auto;
+    min-height: 1.5rem;
+    padding: 0 0.75rem;
+    border-radius: 0.25rem;
+  }
+
+  .symptom-pill-1 {
+    top: 0;
+    left: 5%;
+  }
+
+  .symptom-pill-2 {
+    top: 40%;
+    left: -5%;
+  }
+
+  .symptom-pill-3 {
+    bottom: 10%;
+    left: -7%;
+  }
+
+  .symptom-pill-4 {
+    top: 0;
+    right: 0;
+  }
+
+  .symptom-pill-5 {
+    top: 40%;
+    right: -2%;
+  }
+
+  .symptom-pill-6 {
+    bottom: 10%;
+    right: -4%;
+  }
+
+  .feedback-section {
+    padding: 2rem 0;
+  }
+
+  .feedback-eyebrow {
+    font-size: 1rem;
+  }
+
+  .feedback-title {
+    font-size: 1.5rem;
+  }
+
+  .feedback-description {
+    font-size: 0.85rem;
+    margin: 0.75rem auto;
+  }
+
+  .testimonials {
+    gap: 0.5rem;
+  }
+
+  .testimonial-item {
+    width: 90%;
+  }
+
+  .testimonial-card {
+    min-height: 10rem;
+    padding: 1.5rem;
+  }
+
+  .testimonial-card .patient-info img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .testimonial-card .patient-info h3 {
+    font-size: 1rem;
+  }
+
+  .testimonial-card .patient-info p {
+    font-size: 0.75rem;
+  }
+
+  .testimonial-quote {
+    font-size: 0.75rem;
+    width: 100%;
+  }
+
+  .contact-panel {
+    padding: 1rem 1.5rem 2rem;
+    border: 0.5rem solid rgba(196, 196, 196, 0.15);
+    border-radius: 1.5rem;
+  }
+
+  .contact-panel h2 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .contact-panel p {
+    font-size: 0.75rem;
+    font-weight: 400;
+    width: 100%;
+    margin: 0.25rem auto 2rem;
+  }
+
+  .contact-form {
+    min-height: 2.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+ .footer-logo {
+    /* width: 50%; */
+    font-size: 1rem;
+  }
+
+  .footer-navigation-list {
+    margin: 1rem 0 0;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    font-size: 0.75rem;
+  }
+
+  .social-links {
+    gap: 0.25rem;
+  }
+
+  .social-links a {
+    width: auto;
+    height: 2rem;
+  }
+
+  .social-links i {
+    font-size: 1.5rem;
+  }
+
 }
