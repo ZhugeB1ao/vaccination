@@ -22,33 +22,7 @@
     <link rel="stylesheet" href="./assets/style/style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="container header-inner">
-        <a class="logo" href="#"> Vaccination.ng </a>
-
-        <nav class="navigation">
-          <ul class="navigation-list">
-            <li>
-              <a class="navigation-link is-active" href="#">Home</a>
-            </li>
-            <li>
-              <a class="navigation-link" href="#services">Services</a>
-            </li>
-            <li>
-              <a class="navigation-link" href="#schedule">Schedule</a>
-            </li>
-            <li>
-              <a class="navigation-link" href="#contact">Contact us</a>
-            </li>
-          </ul>
-        </nav>
-
-        <a class="status-link" href="#status">Check Status</a>
-        <button class="menu-toggle" aria-label="Toggle menu">
-          <i data-lucide="menu"></i>
-        </button>
-      </div>
-    </header>
+    <app-header></app-header>
 
     <main id="main-content">
       <section class="hero">
@@ -237,12 +211,12 @@
       <section class="registration-section" id="registration">
         <div class="container registration-inner">
           <form class="registration-form">
-            <h1>Get your vaccine registration today</h1>
+            <h2>Get your vaccine registration today</h2>
 
-            <h2>Patient's Full Name</h2>
+            <h3>Patient's Full Name</h3>
             <input id="patient-name" type="text" placeholder="Full name" />
 
-            <h2>Mobile Number</h2>
+            <h3>Mobile Number</h3>
             <p>
               Notifications for appointment and reminders will be sent to this
               provided number
@@ -426,30 +400,13 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container footer-inner">
-        <a class="logo footer-logo" href="#">Vaccination.ng</a>
-
-        <nav class="footer-navigation" aria-label="Footer navigation">
-          <ul class="footer-navigation-list">
-            <li><a class="is-active" href="#">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#schedule">Schedule</a></li>
-            <li><a href="#contact">Contact us</a></li>
-          </ul>
-        </nav>
-
-        <div class="social-links">
-          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        </div>
-      </div>
-    </footer>
+    <app-footer></app-footer>
 
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
+    <script type="module">
+      import "./components/app-header.js";
+      import "./components/app-footer.js";
+
       window.lucide?.createIcons();
     </script>
   </body>
